@@ -426,7 +426,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; 2024 Artisan Coffee Shop. All rights reserved.</p>
+            <p>&copy; 2025 Artisan Coffee Shop. All rights reserved <strong>Hmd Kamrul</strong></p>
           </div>
         </div>
       </footer>
