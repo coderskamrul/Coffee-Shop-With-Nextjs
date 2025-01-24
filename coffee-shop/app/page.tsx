@@ -283,7 +283,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Coffee Story</h2>
               <p className="text-gray-600 mb-6">
-                Since 2012, we've been crafting the perfect cup of coffee for our community. Our journey began with a simple passion for quality coffee and has evolved into a commitment to sourcing the finest beans from sustainable farms around the world.
+                Since 2012 we ve been crafting the perfect cup of coffee for our community. Our journey began with a simple passion for quality coffee and has evolved into a commitment to sourcing the finest beans from sustainable farms around the world.
               </p>
               <p className="text-gray-600 mb-6">
                 Every bean we source, every drink we craft, and every customer we serve is part of our commitment to excellence in coffee culture.
