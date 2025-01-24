@@ -20,17 +20,20 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-gray-900">
+              Home
+            </Link>
             <Link href="/menu" className="text-gray-700 hover:text-gray-900">
               Cafe Menu
             </Link>
+            <Link href="/gallery" className="text-gray-700 hover:text-gray-900">
+              Gallery
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-gray-900">
+              Contact Us
+            </Link>
             <Link href="/about" className="text-gray-700 hover:text-gray-900">
               About Us
-            </Link>
-            <Link href="/find-us" className="text-gray-700 hover:text-gray-900">
-              Find Us
-            </Link>
-            <Link href="/catering" className="text-gray-700 hover:text-gray-900">
-              Alowishus Catering
             </Link>
           </div>
 
@@ -50,7 +53,7 @@ export function Navbar() {
                 <CartItems />
               </SheetContent>
             </Sheet>
-            <Link href="https://github.com/coderskamrul" className="text-white bg-black px-4 py-2 rounded">Github Repo</Link>
+            <Button>Buy Gift Vouchers</Button>
           </div>
         </div>
       </div>

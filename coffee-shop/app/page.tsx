@@ -8,72 +8,62 @@ import { Navbar } from "@/components/navbar";
 import { useCart } from "@/hooks/use-cart";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Link from "next/link";
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  description: string;
-}
-
-const products: Product[] = [
+// Featured products for the home page
+const products = [
   {
     id: 1,
     name: "Espresso",
     price: 3.99,
     image: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&auto=format&fit=crop&q=60",
-    description: "Rich and bold single shot espresso"
+    description: "Rich and bold single shot espresso",
+    category: "hot",
+    details: "Our signature espresso is crafted from premium Arabica beans, roasted to perfection to bring out deep, complex flavors with a smooth finish.",
+    ingredients: ["Premium Arabica Beans", "Filtered Water"],
+    size: ["Single Shot", "Double Shot"],
+    calories: 1,
+    caffeine: "63mg"
   },
   {
     id: 2,
     name: "Cappuccino",
     price: 4.99,
     image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&auto=format&fit=crop&q=60",
-    description: "Classic Italian coffee with steamed milk foam"
+    description: "Classic Italian coffee with steamed milk foam",
+    category: "hot",
+    details: "A perfect balance of espresso, steamed milk, and velvety foam creates this Italian classic.",
+    ingredients: ["Espresso", "Steamed Milk", "Milk Foam"],
+    size: ["Small", "Medium", "Large"],
+    calories: 120,
+    caffeine: "63mg"
   },
   {
     id: 3,
-    name: "Latte",
+    name: "Iced Latte",
     price: 4.49,
     image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&auto=format&fit=crop&q=60",
-    description: "Smooth espresso with steamed milk"
+    description: "Smooth espresso with cold milk over ice",
+    category: "cold",
+    details: "Our refreshing iced latte combines shots of rich espresso with cold milk and ice.",
+    ingredients: ["Espresso", "Cold Milk", "Ice"],
+    size: ["Small", "Medium", "Large"],
+    calories: 100,
+    caffeine: "63mg"
   },
   {
     id: 4,
     name: "Cold Brew",
     price: 4.99,
     image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&auto=format&fit=crop&q=60",
-    description: "Smooth, cold-steeped coffee served over ice"
-  },
-  {
-    id: 5,
-    name: "Hot Brew",
-    price: 10.99,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO5E7nTVlMN_WQNACjVxdHDq8Zqql5z46fCQ&s",
-    description: "Smooth, cold-steeped coffee served over ice"
-  },
-  {
-    id: 6,
-    name: "Cold Nitro",
-    price: 15.99,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ZQEi6nwAqMwz3pN7H8NxKlqWYcMMmcaCVQ&s",
-    description: "Smooth, cold-steeped coffee served over ice"
-  },
-  {
-    id: 7,
-    name: "Coffee Drink",
-    price: 20.99,
-    image: "https://img.freepik.com/premium-photo/close-up-coffee-cup-table_1048944-13036369.jpg?semt=ais_incoming",
-    description: "Smooth, cold-steeped coffee served over ice"
-  },
-  {
-    id: 8,
-    name: "New Coffee Brew",
-    price: 25.99,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-H-XNaD_ChB9AUWR2ca1kYz8wLjI0XcAkGA&s",
-    description: "Coffee served over ice with a hint of vanilla"
-  },
+    description: "Smooth, cold-steeped coffee served over ice",
+    category: "cold",
+    details: "Steeped for 12 hours, our cold brew offers a smooth, less acidic taste with subtle chocolate notes.",
+    ingredients: ["Cold Brew Coffee", "Filtered Water", "Ice"],
+    size: ["Small", "Medium", "Large"],
+    calories: 5,
+    caffeine: "155mg"
+  }
 ];
 
 const testimonials = [
@@ -245,16 +235,22 @@ export default function Home() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
                 <Card className="overflow-hidden">
-                  <div className="relative h-48">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <Link href={`/menu/${product.id}`}>
+                    <div className="relative h-48 cursor-pointer transition-transform hover:scale-105">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </Link>
                   <div className="p-4">
-                    <h3 className="text-xl font-semibold">{product.name}</h3>
+                    <Link href={`/menu/${product.id}`}>
+                      <h3 className="text-xl font-semibold hover:text-primary cursor-pointer">
+                        {product.name}
+                      </h3>
+                    </Link>
                     <p className="text-gray-600 mt-2">{product.description}</p>
                     <div className="flex justify-between items-center mt-4">
                       <span className="text-lg font-bold">${product.price}</span>
@@ -290,7 +286,7 @@ export default function Home() {
                 Since 2012, we've been crafting the perfect cup of coffee for our community. Our journey began with a simple passion for quality coffee and has evolved into a commitment to sourcing the finest beans from sustainable farms around the world.
               </p>
               <p className="text-gray-600 mb-6">
-                Every cup we serve is a result of careful selection, precise roasting, and expert brewing. Our baristas are trained in the art of coffee making, ensuring that each drink meets our high standards of quality and taste.
+                Every bean we source, every drink we craft, and every customer we serve is part of our commitment to excellence in coffee culture.
               </p>
               <Button size="lg">Learn More About Us</Button>
             </div>
@@ -400,36 +396,10 @@ export default function Home() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-2 rounded-md text-gray-900"
             />
-            <Button className="text-black hover:bg-red-600 hover:text-white" variant="outline">Subscribe</Button>
+            <Button className="text-red-600" variant="outline">Subscribe</Button>
           </div>
         </motion.section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Visit Us</h3>
-              <p>123 Coffee Street</p>
-              <p>Brewville, CF 12345</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Hours</h3>
-              <p>Monday - Friday: 7am - 8pm</p>
-              <p>Saturday - Sunday: 8am - 6pm</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Contact</h3>
-              <p>Phone: (555) 123-4567</p>
-              <p>Email: hello@coffeeshop.com</p>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; 2025 Artisan Coffee Shop. All rights reserved <strong>Hmd Kamrul</strong></p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/hooks/use-cart";
 import { Button } from "@/components/ui/button";
+import { ShoppingBag } from "lucide-react";
 
 export function CartItems() {
   const { items, removeItem, updateQuantity } = useCart();
@@ -11,7 +12,8 @@ export function CartItems() {
 
   if (items.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center h-full">
+      <div className="flex flex-col items-center justify-center h-full p-6">
+        <ShoppingBag className="w-12 h-12 text-gray-400 mb-4" />
         <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
         <p className="text-gray-500 mb-4">Add some delicious coffee to get started!</p>
         <Link href="/menu">
@@ -71,9 +73,14 @@ export function CartItems() {
           <span className="font-semibold">Total:</span>
           <span className="font-semibold">${total.toFixed(2)}</span>
         </div>
-        <Link href="/checkout">
-          <Button className="w-full">Proceed to Checkout</Button>
-        </Link>
+        <div className="flex gap-4">
+          <Link href="/cart" className="flex-1">
+            <Button className="w-full" variant="outline">View Cart</Button>
+          </Link>
+          <Link href="/checkout" className="flex-1">
+            <Button className="w-full">Checkout</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

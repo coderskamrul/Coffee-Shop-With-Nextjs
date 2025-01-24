@@ -1,12 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useCart } from "@/hooks/use-cart";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
+import { Navbar } from "@/components/navbar";
+import { useToast } from "@/hooks/use-toast";
 
 export default function CheckoutPage() {
+  const router = useRouter();
+  const { toast } = useToast();
   const { items, clearCart } = useCart();
   const [formData, setFormData] = useState({
     name: "",
@@ -21,15 +26,25 @@ export default function CheckoutPage() {
     e.preventDefault();
     // Handle payment processing here
     clearCart();
-    // Redirect to success page
+    toast({
+      title: "Order Confirmed!",
+      description: "Thank you for your order. We'll send you an email confirmation shortly.",
+    });
+    router.push("/");
   };
 
+  if (items.length === 0) {
+    router.push("/cart");
+    return null;
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50 pt-20">
+    <div className="min-h-screen bg-[#f8f5f2]">
+      <Navbar />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-3xl mx-auto p-6"
+        className="max-w-3xl mx-auto p-6 pt-24"
       >
         <h1 className="text-3xl font-bold mb-8">Checkout</h1>
         
@@ -51,6 +66,7 @@ export default function CheckoutPage() {
 
         <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-xl font-semibold mb-4">Payment Details</h2>
+          
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium mb-1">Name</label>
