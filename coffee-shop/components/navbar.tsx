@@ -53,7 +53,7 @@ export function Navbar() {
                 <CartItems />
               </SheetContent>
             </Sheet>
-            <Button>Buy Gift Vouchers</Button>
+            <Button>Github Repo</Button>
           </div>
         </div>
       </div>
