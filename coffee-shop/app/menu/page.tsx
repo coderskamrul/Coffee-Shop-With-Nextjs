@@ -17,7 +17,6 @@ const categories = [
   { id: "non-dairy", name: "Non-Dairy", icon: <MilkOff className="w-4 h-4" /> },
   { id: "vegan", name: "Vegan", icon: <Leaf className="w-4 h-4" /> },
 ];
-
 const products = [
   {
     id: 1,
@@ -39,7 +38,7 @@ const products = [
     image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&auto=format&fit=crop&q=60",
     description: "Classic Italian coffee with steamed milk foam",
     category: "hot",
-    details: "A perfect balance of espresso, steamed milk, and velvety foam creates this Italian classic. Each cup is crafted with care by our expert baristas.",
+    details: "A perfect balance of espresso, steamed milk, and velvety foam creates this Italian classic.",
     ingredients: ["Espresso", "Steamed Milk", "Milk Foam"],
     size: ["Small", "Medium", "Large"],
     calories: 120,
@@ -52,7 +51,7 @@ const products = [
     image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&auto=format&fit=crop&q=60",
     description: "Smooth espresso with cold milk over ice",
     category: "cold",
-    details: "Our refreshing iced latte combines shots of rich espresso with cold milk and ice for a perfectly balanced and refreshing drink.",
+    details: "Our refreshing iced latte combines shots of rich espresso with cold milk and ice.",
     ingredients: ["Espresso", "Cold Milk", "Ice"],
     size: ["Small", "Medium", "Large"],
     calories: 100,
@@ -65,7 +64,7 @@ const products = [
     image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&auto=format&fit=crop&q=60",
     description: "Smooth, cold-steeped coffee served over ice",
     category: "cold",
-    details: "Steeped for 12 hours, our cold brew offers a smooth, less acidic taste with subtle chocolate notes and a clean finish.",
+    details: "Steeped for 12 hours, our cold brew offers a smooth, less acidic taste with subtle chocolate notes.",
     ingredients: ["Cold Brew Coffee", "Filtered Water", "Ice"],
     size: ["Small", "Medium", "Large"],
     calories: 5,
@@ -73,31 +72,84 @@ const products = [
   },
   {
     id: 5,
-    name: "Oat Milk Latte",
+    name: "Mocha",
     price: 5.49,
-    image: "https://images.unsplash.com/photo-1585494156145-1c60a4fe952b?w=800&auto=format&fit=crop&q=60",
-    description: "Espresso with creamy oat milk",
+    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=60",
+    description: "Decadent espresso with chocolate and steamed milk",
+    category: "hot",
+    details: "A luxurious blend of espresso, chocolate, and steamed milk, topped with whipped cream for a rich indulgence.",
+    ingredients: ["Espresso", "Steamed Milk", "Chocolate Syrup", "Whipped Cream"],
+    size: ["Small", "Medium", "Large"],
+    calories: 250,
+    caffeine: "105mg"
+  },
+  {
+    id: 6,
+    name: "Americano",
+    price: 3.49,
+    image: "https://plus.unsplash.com/premium_photo-1722859269665-2c4c040d9031",
+    description: "Smooth espresso diluted with hot water",
     category: "non-dairy",
-    details: "A dairy-free alternative that doesn't compromise on taste or texture. Made with premium oat milk for a creamy, satisfying experience.",
-    ingredients: ["Espresso", "Oat Milk"],
+    details: "A light yet robust espresso drink with a smooth and clean finish.",
+    ingredients: ["Espresso", "Hot Water"],
+    size: ["Small", "Medium", "Large"],
+    calories: 2,
+    caffeine: "95mg"
+  },
+  {
+    id: 7,
+    name: "Flat White",
+    price: 4.59,
+    image: "https://plus.unsplash.com/premium_photo-1722168025552-39039cc1afea",
+    description: "Silky smooth espresso with microfoam",
+    category: "hot",
+    details: "A harmonious blend of espresso and velvety microfoam for a creamy texture.",
+    ingredients: ["Espresso", "Microfoam"],
     size: ["Small", "Medium", "Large"],
     calories: 120,
     caffeine: "63mg"
   },
   {
-    id: 6,
-    name: "Almond Cappuccino",
-    price: 5.49,
-    image: "https://images.unsplash.com/photo-1534687941688-651ccaafbff8?w=800&auto=format&fit=crop&q=60",
-    description: "Dairy-free cappuccino with almond milk",
-    category: "non-dairy",
-    details: "Our almond milk cappuccino offers a light, nutty flavor profile that complements our espresso perfectly.",
-    ingredients: ["Espresso", "Almond Milk", "Almond Milk Foam"],
+    id: 8,
+    name: "Iced Americano",
+    price: 3.99,
+    image: "https://plus.unsplash.com/premium_photo-1669374537636-518629de3b85",
+    description: "Refreshing espresso with cold water and ice",
+    category: "cold",
+    details: "A light and crisp coffee made with espresso, cold water, and ice for a refreshing experience.",
+    ingredients: ["Espresso", "Cold Water", "Ice"],
     size: ["Small", "Medium", "Large"],
-    calories: 80,
-    caffeine: "63mg"
+    calories: 5,
+    caffeine: "95mg"
+  },
+  {
+    id: 9,
+    name: "Caramel Macchiato",
+    price: 5.29,
+    image: "https://images.unsplash.com/photo-1459755486867-b55449bb39ff",
+    description: "Espresso with vanilla, steamed milk, and caramel drizzle",
+    category: "hot",
+    details: "A delightful drink of espresso layered with steamed milk, vanilla syrup, and topped with caramel drizzle.",
+    ingredients: ["Espresso", "Steamed Milk", "Vanilla Syrup", "Caramel Drizzle"],
+    size: ["Small", "Medium", "Large"],
+    calories: 200,
+    caffeine: "75mg"
+  },
+  {
+    id: 10,
+    name: "Iced Mocha",
+    price: 5.49,
+    image: "https://plus.unsplash.com/premium_photo-1669374537810-f88d8ad82818",
+    description: "Chilled espresso with chocolate, milk, and whipped cream",
+    category: "non-dairy",
+    details: "A chilled twist on the classic mocha, combining espresso, chocolate, milk, and ice for a refreshing treat.",
+    ingredients: ["Espresso", "Cold Milk", "Chocolate Syrup", "Whipped Cream"],
+    size: ["Small", "Medium", "Large"],
+    calories: 290,
+    caffeine: "105mg"
   }
 ];
+
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");

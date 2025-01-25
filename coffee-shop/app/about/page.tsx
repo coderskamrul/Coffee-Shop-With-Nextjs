@@ -41,19 +41,19 @@ const values = [
 
 const team = [
   {
-    name: "Sarah Johnson",
+    name: "Kamrul Hasan",
     role: "Master Barista",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60"
+    image: "https://avatars.githubusercontent.com/u/60602764?v=4"
   },
   {
-    name: "Michael Chen",
+    name: "Hmd kamrul",
     role: "Coffee Roaster",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=60"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7EvsAlFJXNQLG4HwCEeDglyEJJsB5DOHLCQ&s"
   },
   {
     name: "Emily Rodriguez",
     role: "Cafe Manager",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=60"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0V4khZ9p_Y2ZSIjBJgJd9EVUITbxn5HYsZg&s"
   }
 ];
 

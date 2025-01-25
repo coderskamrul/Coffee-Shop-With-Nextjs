@@ -63,6 +63,84 @@ const products = [
     size: ["Small", "Medium", "Large"],
     calories: 5,
     caffeine: "155mg"
+  },
+  {
+    id: 5,
+    name: "Mocha",
+    price: 5.49,
+    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=60",
+    description: "Decadent espresso with chocolate and steamed milk",
+    category: "hot",
+    details: "A luxurious blend of espresso, chocolate, and steamed milk, topped with whipped cream for a rich indulgence.",
+    ingredients: ["Espresso", "Steamed Milk", "Chocolate Syrup", "Whipped Cream"],
+    size: ["Small", "Medium", "Large"],
+    calories: 250,
+    caffeine: "105mg"
+  },
+  {
+    id: 6,
+    name: "Americano",
+    price: 3.49,
+    image: "https://plus.unsplash.com/premium_photo-1722859269665-2c4c040d9031",
+    description: "Smooth espresso diluted with hot water",
+    category: "hot",
+    details: "A light yet robust espresso drink with a smooth and clean finish.",
+    ingredients: ["Espresso", "Hot Water"],
+    size: ["Small", "Medium", "Large"],
+    calories: 2,
+    caffeine: "95mg"
+  },
+  {
+    id: 7,
+    name: "Flat White",
+    price: 4.59,
+    image: "https://plus.unsplash.com/premium_photo-1722168025552-39039cc1afea",
+    description: "Silky smooth espresso with microfoam",
+    category: "hot",
+    details: "A harmonious blend of espresso and velvety microfoam for a creamy texture.",
+    ingredients: ["Espresso", "Microfoam"],
+    size: ["Small", "Medium", "Large"],
+    calories: 120,
+    caffeine: "63mg"
+  },
+  {
+    id: 8,
+    name: "Iced Americano",
+    price: 3.99,
+    image: "https://plus.unsplash.com/premium_photo-1669374537636-518629de3b85",
+    description: "Refreshing espresso with cold water and ice",
+    category: "cold",
+    details: "A light and crisp coffee made with espresso, cold water, and ice for a refreshing experience.",
+    ingredients: ["Espresso", "Cold Water", "Ice"],
+    size: ["Small", "Medium", "Large"],
+    calories: 5,
+    caffeine: "95mg"
+  },
+  {
+    id: 9,
+    name: "Caramel Macchiato",
+    price: 5.29,
+    image: "https://images.unsplash.com/photo-1459755486867-b55449bb39ff",
+    description: "Espresso with vanilla, steamed milk, and caramel drizzle",
+    category: "hot",
+    details: "A delightful drink of espresso layered with steamed milk, vanilla syrup, and topped with caramel drizzle.",
+    ingredients: ["Espresso", "Steamed Milk", "Vanilla Syrup", "Caramel Drizzle"],
+    size: ["Small", "Medium", "Large"],
+    calories: 200,
+    caffeine: "75mg"
+  },
+  {
+    id: 10,
+    name: "Iced Mocha",
+    price: 5.49,
+    image: "https://plus.unsplash.com/premium_photo-1669374537810-f88d8ad82818",
+    description: "Chilled espresso with chocolate, milk, and whipped cream",
+    category: "cold",
+    details: "A chilled twist on the classic mocha, combining espresso, chocolate, milk, and ice for a refreshing treat.",
+    ingredients: ["Espresso", "Cold Milk", "Chocolate Syrup", "Whipped Cream"],
+    size: ["Small", "Medium", "Large"],
+    calories: 290,
+    caffeine: "105mg"
   }
 ];
 

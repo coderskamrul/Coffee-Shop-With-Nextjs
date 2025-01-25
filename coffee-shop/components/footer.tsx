@@ -66,11 +66,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-white w-5 h-5 text-primary" />
-                <span className="text-gray-400">+10800-33-800</span>
+                <span className="text-gray-400">+880 1635499809</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-white w-5 h-5 text-primary" />
-                <span className="text-gray-400">mycoffee@mycoffeeshop.us</span>
+                <span className="text-gray-400">kamrul.wpxpo@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-400">&copy; 2025 CoffeeKing. All rights reserved By Hmd Kamrul</p>
+          <p className="text-gray-400">&copy; 2025 CoffeeKing. Developed By Hmd Kamrul</p>
         </div>
       </div>
     </footer>
