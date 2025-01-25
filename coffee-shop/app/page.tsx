@@ -147,8 +147,8 @@ const products = [
 const testimonials = [
   {
     id: 1,
-    name: "Aeysha Ahmed",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",
+    name: "Hasan Ahmed",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0V4khZ9p_Y2ZSIjBJgJd9EVUITbxn5HYsZg&s",
     text: "The best coffee I've ever had! The atmosphere is amazing and the staff is so friendly."
   },
   {
